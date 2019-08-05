@@ -8,3 +8,6 @@ class Member(models.Model):
     USER_PASS = models.CharField(max_length=100)
     USER_NAME = models.TextField()
     CREATE_DATE= models.DateTimeField(default=timezone.now)
+    objects = models.Manager()
+    def __str__(self):
+        return self.USER_NAME

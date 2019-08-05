@@ -11,6 +11,10 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <title>璇的購物網站</title>
+
+    {% if signup_success %}
+      <script> alert('{{signup_success}}') </script>
+    {% endif %}
 </head>
 
 <body>

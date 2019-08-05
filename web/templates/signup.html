@@ -14,7 +14,9 @@
           integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   
       <title>註冊</title>
-
+      {% if signup_success %}
+      <script> alert('{{signup_success}}') </script>
+    {% endif %}
 </head>
 
 
@@ -61,15 +63,15 @@
               <div class="container">
           
                 <h1>註冊</h1>
-                <form method="POST" action="/signup/post">
+                <form method="POST" action="/index/">
                 <label>姓名</label>
                 <input class="form-control" type="text" name="username">
                 <label>Enter your E-mail</label>
                 <input class="form-control" type="text" name="email">
                 <label>Enter your Password</label>
-                <input class="form-control" type="password" name="pass"><br>
+                <input class="form-control" type="password" name="password"><br>
                 {% csrf_token %}
-                <input type="submit" class="btn btn-primary">確定</button>
+                <input class="btn btn-primary" type="submit" value="確認"></button>
                 </form>
               </div>
         </div>
