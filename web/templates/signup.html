@@ -21,7 +21,7 @@
 
 
 <body>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-info">
                 <a class="navbar-brand" href="../">{{web_name}}</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -64,12 +64,12 @@
           
                 <h1>註冊</h1>
                 <form method="POST" action="/index/">
-                <label>姓名</label>
-                <input class="form-control" type="text" name="username">
+                <label>Enter your Name</label>
+                <input class="form-control" type="text" name="username" placeholder="姓名">
                 <label>Enter your E-mail</label>
-                <input class="form-control" type="text" name="email">
+                <input class="form-control" type="text" name="email"  placeholder="帳號">
                 <label>Enter your Password</label>
-                <input class="form-control" type="password" name="password"><br>
+                <input class="form-control" type="password" name="password"  placeholder="密碼"><br>
                 {% csrf_token %}
                 <input class="btn btn-primary" type="submit" value="確認"></button>
                 </form>
