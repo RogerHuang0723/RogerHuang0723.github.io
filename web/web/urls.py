@@ -15,12 +15,20 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from music.views import hello_world,index,signup,post_signup#,post_login
+from music.views import hello_world,index,signup,post_signup,post_login,login,logout,GetArticleAPI
+from django.conf import settings
+from django.conf.urls.static import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index),
-    path('index/',post_signup),    
+    path('post_signup/',post_signup),    
     path('signup/',signup),
-    # path('login/',post_login)
+    path('post_login/',post_login),
+    path('login/',login),
+    path('logout/',logout),
+    path('api/article',GetArticleAPI)
 
-]
+] + staticfiles_urlpatterns() 
+# static(settings.STATIC_URL , document_root=settings.STATIC_ROOT)
+# static(settings.IMAGES_URL , document_root=settings.IMAGES_ROOT)

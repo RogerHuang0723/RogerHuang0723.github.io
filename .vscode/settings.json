@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "django_venv\\Scripts\\python.exe"
+    "python.pythonPath": "django_venv\\Scripts\\python.exe",
+    "python.analysis.disabled":["unresolved-import"]
 }
